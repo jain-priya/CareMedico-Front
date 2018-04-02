@@ -19,7 +19,10 @@
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
 
   <link rel="stylesheet" href="../../bower_components/select2/dist/css/select2.min.css">
-  
+  <link rel="stylesheet" href="../../bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+ 
   
 
   <!-- Google Font -->
@@ -30,9 +33,9 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>C</b>M</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">CareMedico</span>
     </a>
@@ -116,11 +119,123 @@
     
     <!-- /.sidebar -->
   </aside>
+  
+  
+<!--  Content-->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      </section>
+      <h1>
+        Edit Profile
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Profile</a></li>
+        <li class="active">80g Details</li>
+      </ol>
+    </section>
+    
+    
+       <section class="content">
+        <!-- left column -->
+        
+     
+            <div class="box box-primary">
+            
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body row">
+               
+               <div class="col-md-6">
+                <div class="form-group">
+                  <label for="fullName">NGO Name</label>
+                  <input type="text" class="form-control" id="fullName" name="fullName">
+                </div>
+                <div class="form-group">
+                  <label for="address">Address</label>
+                  
+                  <textarea class="form-control" name="address" id="address" cols="30" rows="10" ></textarea>
+                        </div>
+                <div class="form-group">
+                  <label for="certi"> 80G Certification Reg. No.</label>
+                  <input type="text" class="form-control" name="certi" id="certi">
+                </div>
+              <div class="form-group">
+                <label>Date of incorporation</label>
+
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker1" name="dateOfIncorp">
+                </div>
+                <!-- /.input group -->
+              </div>
+  
+
+    
+     <div class="form-group">
+                  <label for="pancard">PAN CARD Number</label>
+                  <input type="text" class="form-control" id="pancard"  name="pancard" >
+                </div>
+                
+              </div>
+              <div class="col-md-6">
+              
+              <div class="form-group">
+                 
+                  <label for="phone">Number</label>
+                  
+                  <input type="number" class="form-control" id="phone" name="phone">
+                  
+                </div> 
+                 <div class="form-group">
+                <label>80G Registration Date</label>
+
+                <div class="input-group date">
+                  <div class="input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </div>
+                  <input type="text" class="form-control pull-right" id="datepicker2" name="dateOfReg">
+                </div>
+             
+              </div>
+
+                 <div class="form-group">
+                  <label for="placeOfIncorp">Place of incorporation</label>
+                  <input type="text" class="form-control" id="placeOfIncorp" name="placeOfIncorp">
+                </div>
+              </div>
+              
+              </div>
+               <div class="form-group">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox">
+                     The information submitted herewith above is correct and true to my knowledge. All the documents uploaded are genuine and valid. I hereby agree to inform Ketto in case of any changes in my organisation's status.
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox">
+                    I hereby declare that I have read and agree to adhere to Ketto's terms of use, FAQs, pricing and privacy policy.
+                    </label>
+                  </div>
+                </div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Save &amp; Preview</button>
+              </div>
+            </form>
+          </div>
+     
+      <!-- /.row -->
+    </section>
+    
     </div>
+    
+    
+<!--    Footer-->
     <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
@@ -152,9 +267,19 @@
 <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script>
+<script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
-    
+    <script>
+    //Date picker
+    $('#datepicker1').datepicker({
+      autoclose: true
+    })
+$('#datepicker2').datepicker({
+      autoclose: true
+    })
+    </script>
     
     </body>
 </html>

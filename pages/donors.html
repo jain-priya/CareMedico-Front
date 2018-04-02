@@ -20,7 +20,9 @@
 
   <link rel="stylesheet" href="../bower_components/select2/dist/css/select2.min.css">
   
-  
+   <!-- DataTables -->
+  <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+ 
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -30,9 +32,9 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>C</b>M</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">CareMedico</span>
     </a>
@@ -118,8 +120,68 @@
   </aside>
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      </section>
+                 
+<section class="content-header">
+      <h1>
+       Donor List
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#">DashBoard</a></li>
+
+        <li class="active">Donors</li>
+      </ol>
+    </section>
+             
+              <section class="content">
+               <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Donors</h3>
+            </div>
+            
+            <table class="table  text-center">
+                <tr class="pull-right">
+                  <td>
+                    <button type="button" class="btn btn-block btn-primary">Send All 80g</button>
+                  </td>
+                   <td>
+                    <button type="button" class="btn btn-block btn-success">Send All Thank You Mail</button>
+                  </td>
+                 <td>
+                    <button type="button" class="btn btn-block btn-info">Download as CSV</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-block btn-danger">Upload CSV</button>
+                  </td>
+                </tr>
+            </table>
+            
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Contact No.</th>
+                  <th>Fundraiser</th>
+                  <th>Account</th>
+                  <th>Donation Type</th>
+                  <th>80g Status</th>
+                  <th>Thank You Mail Status</th>
+                </tr>
+                </thead>
+                <tbody>
+               
+                 
+                </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          </section>
+          <!-- /.box -->
+
+      
     </div>
     <footer class="main-footer">
     <div class="pull-right hidden-xs">
@@ -148,12 +210,31 @@
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
     
     
     </body>
