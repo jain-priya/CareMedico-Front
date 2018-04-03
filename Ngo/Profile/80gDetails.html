@@ -50,7 +50,7 @@
       </a>
 
       <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
+               <ul class="nav navbar-nav">
          
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
@@ -60,9 +60,32 @@
             
           </li>
           <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>-->
+         <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </nav>
@@ -99,12 +122,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active "><a href="general.html"> <i class="fa fa-circle-o"></i>General</a></li>
+            <li ><a href="general.html"> <i class="fa fa-circle-o"></i>General</a></li>
             <li><a href="bankDetails.html"><i class="fa fa-circle-o"></i>Bank Details
             </a></li>
              <li><a href="documents.html"><i class="fa fa-circle-o"></i>Documents
             </a></li>
-             <li><a href="80gDetails.html"><i class="fa fa-circle-o"></i>80g Details
+             <li class="active "><a href="80gDetails.html"><i class="fa fa-circle-o"></i>80g Details
             </a></li>
           </ul>
         </li>
@@ -143,7 +166,7 @@
             <div class="box box-primary">
             
             <!-- form start -->
-            <form role="form">
+            <form role="form" action="#" method="post">
               <div class="box-body row">
                
                <div class="col-md-6">
@@ -211,15 +234,15 @@
                <div class="form-group">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox">
-                     The information submitted herewith above is correct and true to my knowledge. All the documents uploaded are genuine and valid. I hereby agree to inform Ketto in case of any changes in my organisation's status.
+                      <input type="checkbox" required>
+                     The information submitted herewith above is correct and true to my knowledge. All the documents uploaded are genuine and valid. I hereby agree to inform CareMedico in case of any changes in my organisation's status.
                     </label>
                   </div>
 
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox">
-                    I hereby declare that I have read and agree to adhere to Ketto's terms of use, FAQs, pricing and privacy policy.
+                      <input type="checkbox" required>
+                    I hereby declare that I have read and agree to adhere to CareMedico's terms of use, FAQs, pricing and privacy policy.
                     </label>
                   </div>
                 </div>
@@ -227,6 +250,7 @@
                 <button type="submit" class="btn btn-primary">Save &amp; Preview</button>
               </div>
             </form>
+<!--            Form End-->
           </div>
      
       <!-- /.row -->
@@ -237,25 +261,13 @@
     
 <!--    Footer-->
     <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
-    </div>
+   
     <strong>Copyright &copy; CareMedico </strong> All rights
     reserved.
   </footer>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#" data-toggle="tab"><i class="fa fa-home"></i>Logout</a></li>   </ul>
-    <!-- Tab panes -->
-    
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
+  
+ 
 </div>
 <!-- ./wrapper -->
 

@@ -20,9 +20,9 @@
 
   <link rel="stylesheet" href="../bower_components/select2/dist/css/select2.min.css">
   
- <!-- DataTables -->
+   <!-- DataTables -->
   <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-  
+ 
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -32,10 +32,10 @@
 
   <header class="main-header">
     <!-- Logo -->
-     <a href="#" class="logo">
+    <a href="#" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>C</b>M</span>
-    <!-- logo for regular state and mobile devices -->
+      <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">CareMedico</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -49,7 +49,7 @@
       </a>
 
       <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
+           <ul class="nav navbar-nav">
          
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
@@ -59,10 +59,33 @@
             
           </li>
           <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>-->
+            <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
         </ul>
+            </li>
+          </ul>
       </div>
     </nav>
   </header>
@@ -72,47 +95,16 @@
     <section class="sidebar">
       <!-- Sidebar user panel -->
       
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
+   <ul class="sidebar-menu" data-widget="tree">
        
-        <li><a href="./donors.html"><i class="fa fa-check-circle"></i><span>Donors</span></a></li>
-          <li><a href="./supporterList.html">  <i class="fa fa-list"></i><span>Supporters List</span></a></li>
-       
-          <li class="treeview">
-          <a href="#">
-             <i class="fa fa-list"></i><span>Fund Raisers</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="./fundRaiser/byMe.html"><i class="fa fa-circle-o"></i> By Me</a></li>
-            <li><a href="./fundRaiser/byCampaigners.html"><i class="fa fa-circle-o"></i> By Campaigners</a></li>
-          </ul>
-        </li>
-        <li class="treeview active">
-          <a href="#">
-            <i class="fa fa-user"></i> <span>Profile</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active "><a href="Profile/general.html"> <i class="fa fa-circle-o"></i>General</a></li>
-            <li><a href="./Profile/bankDetails.html"><i class="fa fa-circle-o"></i>Bank Details
-            </a></li>
-             <li><a href="./Profile/documents.html"><i class="fa fa-circle-o"></i>Documents
-            </a></li>
-             <li><a href="./Profile/80gDetails.html"><i class="fa fa-circle-o"></i>80g Details
-            </a></li>
-          </ul>
-        </li>
+          
+        <li ><a href="./fundraiser.html"><i class="fa fa-circle-o"></i>Fund Raisers</a></li>
+        <li ><a href="./general.html"> <i class="fa fa-circle-o"></i>Profile</a></li>
        <li><a href="./messages.html"><i class="fa fa-envelope"></i><span>Messages</span></a></li>
-        <li><a href="./comments.html"><i class="fa fa-comments"></i><span>Comments</span></a></li>
-        <li><a href="./updates.html"><i class="fa fa-wrench"></i><span>Updates</span></a></li>
-        <li><a href="./team.html"><i class="fa fa-users"></i><span>Team</span></a></li>
-        <li><a href="./helpCenter.html"><i class="fa fa-question-circle"></i><span>Help Center</span></a></li>
-       
+        <li ><a href="./comments.html"><i class="fa fa-comments"></i><span>Comments</span></a></li>
+        
+        <li class="active"><a href="./donors.html"><i class="fa fa-check-circle"></i><span>Donors</span></a></li>
+      
         </ul>
     </section>
     
@@ -120,29 +112,59 @@
   </aside>
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      </section>
+                 
+<section class="content-header">
+      <h1>
+       Donor List
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#">DashBoard</a></li>
+
+        <li class="active">Donoations</li>
+      </ol>
+    </section>
+             
+              <section class="content">
+               <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Donations</h3>
+            </div>
+            
+            
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>Date</th>
+                 
+                  <th>Fundraiser</th>
+                
+                  <th>Donation Type</th>
+        
+                  <th>Thank You Mail</th>
+                </tr>
+                </thead>
+                <tbody>
+               
+                 
+                </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          </section>
+          <!-- /.box -->
+
+      
     </div>
     <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.4.0
-    </div>
+    
     <strong>Copyright &copy; CareMedico </strong> All rights
     reserved.
   </footer>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#" data-toggle="tab"><i class="fa fa-home"></i>Logout</a></li>   </ul>
-    <!-- Tab panes -->
-    
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
+ 
 </div>
 <!-- ./wrapper -->
 
@@ -150,12 +172,31 @@
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- DataTables -->
+<script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
 <script src="../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
     
     
     </body>
