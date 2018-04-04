@@ -171,27 +171,27 @@
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" id="datepicker1" name="dateOfIncorp">
+                  <input type="text" class="form-control pull-right" id="datepicker3" name="dateOfIncorp">
                 </div>
-
+                          </div>
                 <div class="form-group">
                        <br>
                        Additional Registration Documents
                   <div class="radio">
                     <label>
-                      <input type="radio" name="radio" id="opt1" onclick="check1()" >
+                      <input type="radio" name="radio" id="opt1" onchange="check1()" >
                                Memorandum of Association             
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio"  id="opt2" onclick="check2()" name="radio">
+                      <input type="radio"  id="opt2" onchange="check2()" name="radio">
                         Trust Deed
                     </label>
                   </div>
                   <div class="radio">
                     <label>
-                      <input type="radio"  id="opt3" onclick="check3()" name="radio">
+                      <input type="radio"  id="opt3" onchange="check3()" name="radio">
                       Society Deed
                     </label>
                   </div>
@@ -202,42 +202,41 @@
                   
                   <label for="memOfArticle">Memorandum of Articles</label>
                    <input type="file"  name="memOfArticle">
-                  <h6>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</h6>
+                    <h6><i>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</i></h6>
                 </div>
                 
             <div class="form-group"  id="option4" style="display: none"> 
                   <label for="articleOfAss">Articles of Association</label>
                    <input type="file" name="articleOfAss">
-                  <h6>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</h6>
+                <h6><i>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</i></h6>
             </div>
                
                 <div class="form-group"  id="option2" style="display: none"> 
                   <label for="trustDeed">Trust Deed</label>
                    <input type="file" id="trustDeed" name="trustDeed">
-                  <h6>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</h6>
+                    <h6><i>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</i></h6>
                 </div>
                 
                 <div class="form-group"  id="option3" style="display: none"> 
                   <label for="societyDeed">Society Deed</label>
                    <input type="file" id="societyDeed" name="societyDeed">
-                  <h6>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</h6>
+                  <h6><i>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</i></h6>
                 </div>
-                      
-              </div>
+              
             </div>   
                 <div class="col-md-6">
                     <div class="form-group"> 
                   <label for="certi">Registration Certificate</label>
                    <input type="file" id="certi" name="registrationCerti">
-                  <h6>Can only be in English, Hindi or Marathi. In case of availability in other languages, please upload the ‘Trust Deed’.
-                  Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</h6>
+                  <h6><i>Can only be in English, Hindi or Marathi. In case of availability in other languages, please upload the ‘Trust Deed’.
+                      Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</i></h6>
                     </div>
                     
-                    <div class="form-group"> 
+                <div class="form-group"> 
                   <label for="80certi">Do you have 80G certificate?</label>
-                  <input type="checkbox" id="checkbox4">Off
+                  <input type="checkbox" id="checkbox4">
                    <input type="file" id="80certi" name="80registrationCerti" style="display: none;" >
-                  <h6>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</h6>
+                    <h6><i>Size: Should not be more than 2 MB. Upload only in jpg, png or bmp format</i></h6>
                     </div>        
                 </div>
                   </div>  
@@ -291,7 +290,8 @@
  <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <script src="../../dist/js/radio.js"></script>
    <script>
-$('#datepicker1').datepicker({
+       
+$('#datepicker3').datepicker({
       autoclose: true
     });
        
@@ -303,7 +303,7 @@ $('#datepicker1').datepicker({
             }              
         });
 
-};
+
     </script>   
     
     </body>

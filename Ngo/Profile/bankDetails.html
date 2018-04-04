@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+<link rel="stylesheet" href="../../dist/css/custom.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
@@ -154,17 +155,170 @@
       
       <section class="content">
           <div class="box box-primary">
+                     
+                      <h4 class="content-header">Bank Details</h4>
+                      
                             
+                   <div class="form-group">
+                  <div class="checkbox row">
+                    <label class="col-md-2 side_space">
+                       Are you FCRA Compliant?
+                    </label>
+                    <input type="checkbox" required id="checkbox" onchange="checkit()" value="yes">
+                   </div>
+                   <h6 class="side_space">To receive donations from anywhere outside of India (foreign currency), your NGO requires the FCRA certificate</h6>
+                  </div> 
+                                        
               <form role="form" action="#" method="post">
                   <div class="box-body row">
-                      <h4 class="content-header">Non - FCRA Acccount Details</h4>
+                   <h4 class="side_space">Non - FCRA Acccount Details</h4> 
+                   
+                         <div class="col-md-6">
                       
-                  </div>  
                   
+                   
+                   <div class="form-group">
+                  <label for="ifsc">IFSC CODE</label>
+                  <input type="text" class="form-control" id="ifsc" name="ifsc_no">
+                </div>
+                <div class="form-group">
+                  <label for="branchName">Branch Name</label>
+                  <input type="text" class="form-control" id="branchName" name=" branch_name">
+                </div>
+                   
+                 <div class="form-group">
+                  <label for="accName">Account Name</label>
+                  <input type="text" class="form-control" id="accName" name="acc_name">
+                </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                 <div class="form-group">
+                  <label for="bankName">Bank Name</label>
+                  <input type="text" class="form-control" id="bankName" name="bank_name">
+                </div>
+                 
+                 <div class="form-group">
+                  <label for="accNo">Account Number</label>
+                  <input type="text" class="form-control" id="accNo" name="acc_no">
+                </div>
+                      
+                 <div class="form-group">
+                  <label for="addInfo">Additional Info</label>
+                  <input type="text" class="form-control" id="addInfo" name="add_info">
+                  <h6>(Such as Routing No, Sort Code, etc)</h6>
+                </div>
+                 </div>
+                   <div style="display:none;" id="fcra">
+                    <h4 class="side_space">FCRA Acccount Details</h4> 
+                   
+                         <div class="col-md-6">
+                      
+                   <div class="form-group">
+                  <label for="ifsc">IFSC CODE</label>
+                  <input type="text" class="form-control" id="ifsc" name="fcra_ifsc_no">
+                </div>
+                <div class="form-group">
+                  <label for="branchName">Branch Name</label>
+                  <input type="text" class="form-control" id="branchName" name="fcra_branch_name">
+                </div>
+                   
+                 <div class="form-group">
+                  <label for="accName">Account Name</label>
+                  <input type="text" class="form-control" id="accName" name="fcra_acc_name">
+                </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                 <div class="form-group">
+                  <label for="bankName">Bank Name</label>
+                  <input type="text" class="form-control" id="bankName" name="fcra_bank_name">
+                </div>
+                 
+                 <div class="form-group">
+                  <label for="accNo">Account Number</label>
+                  <input type="text" class="form-control" id="accNo" name="fcra_acc_no">
+                </div>
+                      
+                 <div class="form-group">
+                  <label for="addInfo">Swift Code</label>
+                  <input type="text" class="form-control" id="addInfo" name="add_info">
+                  <h6>Please leave this field blank if your bank does not have a SWIFT code. 
+To know more (  <div class="tooltip2">?
+  <span class="tooltiptext2">A SWIFT code, also known as a Bank Identifier Code(BIC), is an international bank code that identifies particular banks worldwide. It's used to send/receive money to/from overseas banks. The bank branch/relationship manager will be able to provide you the SWIFT code for your bank account. Alternatively, you can also contact your banks FOREX department for the same. Please note the a SWIFT code is and 8 or 11 digit alphabetic code and differs from branch to branch for every bank. It is not the IFSC code.</span>
+</div>
+ )</h6>
+                </div>   
+                      </div>
+                      </div>
+                        
+                        
+                 <h4 class="side_space">Upload Documents</h4> 
+                   
+                 <div class="col-md-5">
+                      <h5>Document</h5> 
+                   <div class="form-group">
+                  <label for="panno">PAN CARD Number</label>
+                  <input type="text" class="form-control" id="panno" name="pan_no">
+                </div>
+                 <div class="form-group">
+                  <label>Country</label>
+                  <select class="form-control" name="address_type">
+                    <option value="passport">Passport</option>
+                    <option value="driver_license">Driver License</option>
+                    
+                    <option value="bank_statement">Bank Statement</option>
+                    
+                    <option value="voter_card">Voter ID Card</option>
+                    
+                    <option value="electricity_bill">Electricity Bill</option>
+                      
+                    <option value="phone_bill">Phone Bill MTNL/BSNL</option>
+                    
+                    <option value="shop_license">Shop License</option>
+                     </select>
+                     <h6>Choose an address proof from the dropdown above. 
+NGO name should be mentioned in the bill you submit</h6>
+                     </div>
+                     <h5>Cancelled cheque / bank statement / first page of your Non FCRA bank account passbook</h5>
+                     <h6 class="side_space">Please note that the Account name, Account number and Branch IFSC code should be clearly mentioned in the document you choose to upload.</h6>
+                  </div>
+                  
+                  <div class="col-md-5">
+                  <h5>File Name</h5>
+                 <div class="form-group">
+                  <label for="panDoc">Bank Name</label>
+                  <input type="file" class="form-control" id="panDoc" name="pan_doc">
+                </div>
+                 <br>
+                 <div class="form-group">
+                  <input type="file" class="form-control" name="add_proof">
+                </div>
+                 <br>
+                 <div class="form-group">
+                  <input type="file" class="form-control" name=" cancel_cheque">
+                </div>
+                 
+                 </div>
+                <div class="col-md-2">
+                    <h5>Status</h5>
+                     <div class="form-group">
+                  ....
+                </div>
+                </div>
+                 
+                  </div>
+                  <h6>Registered Under GST<subscript>*</subscript> </h6>
+   <div class="box-footer">
+                <button type="button" class="btn btn-primary">Save for later </button>
+              <button type="submit" class="btn btn-primary">Submit for Approval </button>
+              </div>
+              
               </form>
           </div>
           
       </section>
+    
     </div>
     
     
@@ -192,6 +346,15 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script>
     
+ <script>
     
+    $("#checkbox").click(function (){
+            if ($("#checkbox").prop("checked")){
+                $("#fcra").show();
+            }else{
+                $("#fcra").hide();
+            }              
+        });
+    </script>   
     </body>
 </html>

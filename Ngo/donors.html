@@ -22,7 +22,7 @@
   
    <!-- DataTables -->
   <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
- 
+  <link rel="stylesheet" href="../dist/css/custom.css"> 
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -173,8 +173,10 @@
                     <button type="button" class="btn btn-block btn-info">Download as CSV</button>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-block btn-danger">Upload CSV</button>
-                  </td>
+                    <a class="upload1 btn btn-block btn-danger">Upload CSV</a>
+
+
+                     </td>
                 </tr>
             </table>
             
@@ -203,7 +205,29 @@
           </div>
           </section>
           <!-- /.box -->
-
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">X</div>
+        <form action="#" method="post" role="form">
+        <h3>Upload CSV</h3>
+        
+        <div class="form-group">
+                 
+                   
+                  <label for="donorlist"> Donor List</label>
+                  
+                   <input type="file" id="donorlist" name="donorlist">
+                      
+        
+        </div>
+        <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Upload</button>
+<!--            <button type="button" class="btn btn-primary closebutton" >Cancel</button>-->
+            </div>
+        </form>
+    </div>
+</div>
       
     </div>
     <footer class="main-footer">
@@ -243,6 +267,25 @@
       'autoWidth'   : false
     })
   })
+
+    
+      $(function () {
+    $(".upload1").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+            
+    $('.closeButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+});
+           
+
 </script>
     
     

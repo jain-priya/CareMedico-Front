@@ -6,7 +6,7 @@
   <title>NGO DashBoard - CareMedico</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
+   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
+      <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
  <!-- Select2 -->
@@ -22,6 +22,7 @@
   
  <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<link rel="stylesheet" href="../../dist/css/custom.css">
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -174,10 +175,12 @@
                   <label for="email">User Name/Email</label>
                   <input type="email" class="form-control" id="email"  name="email" disabled>
                 </div>
+<!--
                 <div class="form-group">
                   <label for="logo">Upload Logo Image</label>
                   <input type="file" id="logo">
                 </div>
+-->
                
                
                 <div class="form-group">
@@ -186,7 +189,7 @@
                 </div>
                 <div class="form-group">
                   <label>Country</label>
-                  <select class="form-control" name="country">
+                  <select class="form-control" name="country" >
                     
 	<option value="AF">Afghanistan</option>
 	<option value="AX">Åland Islands</option>
@@ -452,7 +455,7 @@
                      <div class="checkbox row">
                      <div class="col-md-3">
                     <label>
-                      <input type="checkbox" required id="checkbox1">Facebook
+                      <input type="checkbox" id="checkbox1">Facebook
                     </label>
                     </div>
                     <div class="col-md-9">
@@ -462,7 +465,7 @@
                      <div class="checkbox row">
                      <div class="col-md-3">
                     <label>
-                      <input type="checkbox" required id="checkbox2">Twitter
+                      <input type="checkbox"  id="checkbox2">Twitter
                     </label>
                     </div>
                     <div class="col-md-9">
@@ -472,7 +475,7 @@
                      <div class="checkbox row">
                      <div class="col-md-3">
                     <label>
-                      <input type="checkbox" required id="checkbox3">Google+
+                      <input type="checkbox"  id="checkbox3">Google+
                     </label>
                     </div>
                     <div class="col-md-9">
@@ -482,13 +485,13 @@
                      <div class="checkbox row">
                      <div class="col-md-3">
                     <label>
-                      <input type="checkbox" required id="checkbox4">Linkedin
+                      <input type="checkbox"  id="checkbox4">Linkedin
                     </label>
-                    </div>
+                    </div>    
                     <div class="col-md-9">
                     <input type="text" id="linkedin" name="ln" class="form-control">
                     </div>
-                  </div>
+                  </div> 
                    
                     
                 </div>
@@ -497,13 +500,13 @@
               <div class="col-md-6">
               
               <div class="form-group">
-                <label>Custom Url</label>
+                <label >Custom Url</label>
 
                 <div class="input-group">
                   
-                  <input type="text" class="form-control" data-inputmask='"mask": ".ketto.org"' data-mask>
+                  <input type="text" class="form-control"   name="url">
                   <div class="input-group-addon">
-                  .ketto.org
+                  .caremedico.org
                   </div>
                 </div>
                 <!-- /.input group -->
@@ -615,17 +618,16 @@
                   <input type="password" class="form-control" id="password2" name="password">
                 </div>
                 </div>
-                </div>
                 
-                  
-                   <div class="form-group">
+                
+                    <div class="form-group side_space">
                   <div class="checkbox">
                     <label>
                       <input type="checkbox" required>
                      The information submitted herewith above is correct and true to my knowledge. All the documents uploaded are genuine and valid. I hereby agree to inform CareMedico in case of any changes in my organisation's status.
                     </label>
                   </div>
-
+ 
                   <div class="checkbox">
                     <label>
                       <input type="checkbox" required>
@@ -634,10 +636,12 @@
                   </div>
                 </div>
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-primary">Save &amp; Preview</button>
               </div>
               
-              
+                </div>
+                
+                  
             </form>
             
 <!--  Form End-->
@@ -677,8 +681,6 @@
 <script src="../../dist/js/demo.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-
-
 
 <script>
     $(function(){

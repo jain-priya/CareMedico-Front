@@ -22,6 +22,7 @@
   
    <!-- DataTables -->
   <link rel="stylesheet" href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="../dist/css/custom.css">
 
 
   <!-- Google Font -->
@@ -172,7 +173,7 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Name</th>
+                  <th>Name</th> 
                   <th>Position</th>
                   <th>Email</th>
                   <th>Phone No.</th>
@@ -182,14 +183,55 @@
                
                 </tbody>
                 </table>
+                <a class="trigger_popup_fricc btn btn-primary">Add a Team Member</a>
+
             </div>
             <!-- /.box-body -->
           </div>
+          
+          
           </section>
           <!-- /.box -->
+           
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">X</div>
+        <form action="#" method="post" role="form">
+            <h3>Add New Team Member</h3>
+            
+                 <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" name="member_name">
+                </div>
+                
+                 <div class="form-group">
+                  <label for="mail">E-mail</label>
+                  <input type="email" class="form-control" id="accNo" name="memeber_email">
+                </div>
+                
+                 <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="number" class="form-control" id="phone" name="member_phone">
+                </div>
+                
+                 <div class="form-group">
+                  <label for="designation">Designation</label>
+                  <input type="text" class="form-control" id="designation" name="member_designation">
+                </div>
+                
+                  <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Save</button>
+<!--            <button type="button" class="btn btn-primary closebutton" >Cancel</button>-->
+            </div>
+        </form>
+    </div>
+</div>
       
     </div>
   
+    
+   
     
 <!--    Footer-->
     
@@ -209,13 +251,44 @@
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- FastClick -->
+<!-- DataTables -->
+<script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
 <script src="../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
     
-    
+    <script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+        
+        $(function () {
+    $(".trigger_popup_fricc").click(function(){
+       $('.hover_bkgr_fricc').show();
+    });
+    $('.hover_bkgr_fricc').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+            
+    $('.closeButton').click(function(){
+        $('.hover_bkgr_fricc').hide();
+    });
+});
+</script>
     </body>
 </html>
